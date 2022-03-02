@@ -1,4 +1,4 @@
-RateIt
+<h1>RateIt</h1>
 
 This is a single page application that allows for a User to express their opions on a video game or share a game with other users. They can share games with other users by entering in the games name, an img url, the price, the systems it can be played on and a short descriptoion of the game.
 
@@ -7,4 +7,4 @@ Kale Leach- Flatiron School Student
 David King (App Name)
 
 Project Status
-THis project is currently being worked on.
+This project is currently being worked on.
