@@ -4,17 +4,19 @@
   padding:0;
 }
 
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     margin: 0 auto;
     padding: 0;
     background-color: #240115;
     font-weight: 400;
     background-size: auto;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto
+    color:#CEC3C1 ;
 }
 
 header {
@@ -27,17 +29,19 @@ header::after {
     clear: both;
 }
 
-#Name {
+ #name {
     color: #240115;
     font-family: 'Playfair Display', serif;
-}
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
 
 nav {
-    float: right;
 }
 
 nav ul {
-    margin: 10px;
     padding: 0;
     list-style: none;
 }
@@ -48,6 +52,8 @@ nav li {
     width:auto;
 }
 
+nav li > .fa {
+}
 
 nav ul > li a {
     color: white;
@@ -57,16 +63,18 @@ nav ul > li a {
 }
 
 nav a:hover {
-    color: black;
+    color: #87F5FB;
 }
 
 .fa {
-    padding: 10px;
+    padding-left: 10px ;
     font-size: 20px;
     width: 20px;
     text-align: center;
     text-decoration: none;
-    margin-right: 1em;
+    margin-right: em;
+    color: #240115;
+
   }
 
 .fa:hover {
@@ -76,15 +84,19 @@ nav a:hover {
 #projectsnav {
     margin-left: 1em;
     margin-right: 1em;
+} 
+
+#add-game{
+    background-color: #de3c4b;
+    color: #CEC3C1 ;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    border-radius: 10px;
+    margin-top: 50px;
 }
-
-
-.fa-twitter {
-    background: #CEC3C1;
-    color: #240115;
-  }
-
-.fa-instagram {
-    background: #CEC3C1;
-    color: #240115;
-  }
+.game-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    f
+}

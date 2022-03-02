@@ -10,17 +10,33 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="stylesheet.css"/>
+      <script src="index.js"></script>
   <body>
     <header>
       <div id="container">
-        <h2 id="Name">Rated</h2>
           <nav class="navbar">
             <ul>
               <li class="links"> <a href= target="_blank" class="fa fa-twitter"></a><li> 
               <li class="links"> <a href= target="_blank" class="fa fa-instagram"></a></li>
-              </ul>
-          </nav>
+            </ul> 
+          </nav> 
       </div>
+      <h1 id= 'name'> RATED </h1>
   </header>
+  
+  <!-- Create a button that when clicked add the form -->
+  <div class="center">
+    <input id = "add-game" type = 'submit' value = 'Add Game'>
+  </div>
+  <div class = 'game-form'>
+    <ul>
+      <label class = 'game-form'> Name </label><input type="text"></lable>
+      <label class = 'game-form'> IMG URL</label><input type="text"></lable>
+      <label class = 'game-form'> Price</label><input type="text"></lable>
+      <label class = 'game-form'> Systems</label><input type="text"></lable>
+      <label class = 'game-form'> Description</label><input type="text"></lable>
+      <input class = 'game-form' type="submit">
+    </ul>
+  </div>
   </body>
 </html>
