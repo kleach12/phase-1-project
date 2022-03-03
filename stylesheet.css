@@ -98,7 +98,7 @@ nav a:hover {
 
 #add-game:hover{
     opacity: 0.7;
-    color:#87F5FB
+    color:#87F5FB;
 }
 #game-form{
     display: flex;
@@ -111,6 +111,7 @@ nav a:hover {
     background-color: #87F5FB;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
+    font-weight: 50;
     margin-left: 35px;
     margin-top: 10px;
     border-radius: 5px;
