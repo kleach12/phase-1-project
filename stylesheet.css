@@ -96,7 +96,7 @@ nav a:hover {
     box-sizing: border-box;
     margin-top: 50px;
     padding:0.15em 1.2em;
-    border:0.1em solid #FFFFFF;
+    border:0.1em solid #CEC3C1;
 }
 
 #add-game:hover{
@@ -111,19 +111,24 @@ nav a:hover {
 }
 
 #submit-game{
-    background-color: #CEC3C1;
+    background-color: #DE3C4B;
+    color: #CEC3C1;
     padding:0.15em 0.17em;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
     margin-left: 35px;
     margin-top: 10px;
     border-radius: 5px;
-    border:0.1em solid #FFFFFF;
+    border:0.1em solid #DE3C4B;
 }
 
 #submit-game:hover{
-    color: #CEC3C1;
-    background-color: #240115;
+    opacity: .8;
 }
 
+input[type="text"], textarea {
+  font-family:'Playfair Display',sans-serif;
+  color: #240115;
+  background-color: #CEC3C1;
+}
 
