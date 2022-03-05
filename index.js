@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const gameButton = document.querySelector("#add-game")
 const addGameForm = document.querySelector('#game-form')
 const submitGame = document.querySelector('#submit-game')
-console.log(submitGame)
+const contClass = document.querySelector('.container')
+
 
 gameButton.addEventListener('click',(e) => {
     addGameForm.innerHTML = `
@@ -38,20 +39,24 @@ gameButton.addEventListener('click',(e) => {
 
 
     function renderGame(game){
-debugger
-      let gameCard = document.createElement('div')
-      gameCard.className = 'card'
-      gameCard.innerHTML = `
-      <h3> ${game.name} </h3>
-      <img src = ${game.imgurl} />
-      <h3> ${game.imgurl} </>
-      <p> ${game.description} </p>
-      <p> ${game.price}</p>
-      <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
+//debugger
+      let frontGameCard = document.createElement('div')
+      let backGameCard = document.createElement('div')
+      frontGameCard.className = 'front_card'
+      frontGameCard.innerHTML = `
+      <img class = "gamePic" src = '${game.imgurl}'/>
+      <button class ='btn'> Button </button>
       `
-debugger
-      document.body.appendChild(gameCard)
-debugger
+      // `<h3> ${game.name} </h3>
+      // <img src = ${game.imgurl} />
+      // <p> ${game.description} </p>
+      // <p> ${game.price}</p>
+      // <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
+      // `
+//debugger
+      contClass.appendChild(frontGameCard)
+      //container.appendChild(gameCard);
+//debugger
     }
 
     

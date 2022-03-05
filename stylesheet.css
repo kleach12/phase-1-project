@@ -12,7 +12,7 @@
 
 body {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 auto;
     background-color: #240115;
     font-weight: 400;
     background-size: auto;
@@ -136,10 +136,49 @@ input[type="text"], textarea {
   background-color: #CEC3C1;
 }
 
-.card{
-    background-color: #CEC3C1;
-    color: #240115 ;
-    border:0.1em solid #DE3C4B;
-    margin: 100px 100px;
+.container{
+  padding-left: 80px;
+  padding-right: auto;
+}
 
+.front_card{
+  padding: 1rem;
+  width: 25rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+}
+
+
+.back_card{
+  background-color: #CEC3C1;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 25rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  /* box-shadow: 3px 4px #e04b52 */
+
+}
+
+.gamePic {
+  /* justify-self: center; */
+  height: 25rem;
+  width: 25rem;
+  opacity: .80;
+}
+
+.btn {
+  position: absolute;
+  margin-top: 30%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
