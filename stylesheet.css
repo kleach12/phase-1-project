@@ -111,10 +111,11 @@ nav a:hover {
 }
 
 #submit-game{
-    background-color: #DE3C4B;
-    color: #CEC3C1;
+    background-color: #240115;
+    color: #DE3C4B;
     padding:0.15em 0.17em;
     font-size: 20px;
+    font-weight: 100;
     font-family: 'Playfair Display', serif;
     margin-left: 35px;
     margin-top: 10px;
@@ -123,7 +124,10 @@ nav a:hover {
 }
 
 #submit-game:hover{
-    opacity: .8;
+    background-color: #DE3C4B;
+    color: #240115;
+    opacity: .9;
+
 }
 
 input[type="text"], textarea {
@@ -132,3 +136,10 @@ input[type="text"], textarea {
   background-color: #CEC3C1;
 }
 
+.card{
+    background-color: #CEC3C1;
+    color: #240115 ;
+    border:0.1em solid #DE3C4B;
+    margin: 100px 100px;
+
+}
