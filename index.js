@@ -46,7 +46,7 @@ gameButton.addEventListener('click',(e) => {
     function renderGame(game){
 //debugger
       let frontGameCard = document.createElement('div')
-      let backGameCard = document.createElement('div')
+      //let backGameCard = document.createElement('div')
       frontGameCard.className = 'front_card'
       frontGameCard.id = `card_${game.id}`
       frontGameCard.innerHTML = `
@@ -63,17 +63,17 @@ gameButton.addEventListener('click',(e) => {
       // `
 
       contClass.appendChild(frontGameCard)
-      let cardButton = document.querySelectorAll(`.btn`)
+      let cardButton = document.getElementById(`btn_${game.id}`)
 
-      cardButton.forEach(e => e.addEventListener('click', (e) => 
-      
+     cardButton.addEventListener('click', (e) => 
+     
       frontGameCard.innerHTML = 
-          `<h3> ${game.name} </h3>
-        <p> ${game.description} </p>
-        <p> ${game.price}</p>
-        <button> Must Play ${game.must_play}</button> <button> Play ${game.play} </button><button> Return ${game.return}  </button>
-        ` )
-      )
+        `<h3> ${game.name} </h3>
+         <p> ${game.description} </p>
+         <p> ${game.price}</p>
+         <button> Must Play ${game.must_play}</button> <button> Play ${game.play} </button><button> Return ${game.return}  </button>` 
+        )
+
 
     }
 
