@@ -32,6 +32,9 @@ gameButton.addEventListener('click',(e) => {
             price:e.target.game_price.value,
             systems:e.target.game_system.value,
             description:e.target.game_description.value,
+            must_play:0,
+            play:0,
+            return:0
           }
           renderGame(game)
           createAGame(game)
@@ -45,33 +48,33 @@ gameButton.addEventListener('click',(e) => {
       let frontGameCard = document.createElement('div')
       let backGameCard = document.createElement('div')
       frontGameCard.className = 'front_card'
-      frontGameCard.id = `${game.id}`
+      frontGameCard.id = `card_${game.id}`
       frontGameCard.innerHTML = `
       <img class = "gamePic" src = '${game.imgurl}'/>
-      <button id = "card_btn" class ='btn'> ${game.name} </button>
+      <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
       `
-      //cardButton.addEventListener('click', (e) => (console.log('Hi')))
-      backGameCard.innerHTML =
-      `<h3> ${game.name} </h3>
-      <img src = ${game.imgurl} />
-      <p> ${game.description} </p>
-      <p> ${game.price}</p>
-      <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
-      `
-//debugger
-      contClass.appendChild(frontGameCard)
-      let cardButton = document.querySelector('#card_btn')
+  
+      // backGameCard.innerHTML =
+      // `<h3> ${game.name} </h3>
+      // <img src = ${game.imgurl} />
+      // <p> ${game.description} </p>
+      // <p> ${game.price}</p>
+      // <button> Must Play ${game.must_play}</button> <button> Play ${game.play} </button><button> Return ${game.return}  </button>
+      // `
 
-      cardButton.addEventListener('click', (e) => {
-        frontGameCard.innerHTML = 
+      contClass.appendChild(frontGameCard)
+      let cardButton = document.querySelectorAll(`.btn`)
+
+      cardButton.forEach(e => e.addEventListener('click', (e) => 
+      
+      frontGameCard.innerHTML = 
           `<h3> ${game.name} </h3>
         <p> ${game.description} </p>
         <p> ${game.price}</p>
-        <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
-        ` 
-      })
-      //container.appendChild(gameCard);
-//debugger
+        <button> Must Play ${game.must_play}</button> <button> Play ${game.play} </button><button> Return ${game.return}  </button>
+        ` )
+      )
+
     }
 
 function getAllGames(){
@@ -80,7 +83,6 @@ function getAllGames(){
   .then(gameData => gameData.forEach(game => renderGame(game)))
 
 }   
-
 getAllGames()
 
 
@@ -95,5 +97,7 @@ function createAGame(game){
     .then(res => res.json())
     .then(game => console.log(game))
 }
+
+
 
 });

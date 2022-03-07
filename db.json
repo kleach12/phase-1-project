@@ -6,15 +6,32 @@
       "price": "59.99",
       "systems": "PS5",
       "description": "lalalalalalallalala",
+      "must_play": 0,
+      "play": 0,
+      "return": 0,
       "id": 1
     },
     {
-      "name": "Crash Bandicoot",
-      "imgurl": "https://www.crashbandicoot.com/content/dam/atvi/Crash/crash-touchui/common/Crash-Bandicoot-Work-Page.png",
+      "name": "Soider Man PS4",
+      "imgurl": "https://images.gnwcdn.com/2018/articles/2018-09-04-11-53/digitalfoundry-2018-marvels-spider-man-ps4-tech-analysis-1536058421317.jpg/EG11/resize/1200x-1/digitalfoundry-2018-marvels-spider-man-ps4-tech-analysis-1536058421317.jpg",
+      "price": "59.99",
+      "systems": "PS4",
+      "description": "Spider man spidserman does whatever a spider can ",
+      "must_play": 0,
+      "play": 0,
+      "return": 0,
+      "id": 2
+    },
+    {
+      "name": "Elden Ring",
+      "imgurl": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/capsule_616x353.jpg?t=1646406355",
       "price": "59.99",
       "systems": "PS5",
-      "description": "lalalalalalallalala",
-      "id": 2
+      "description": "Hard ASL",
+      "must_play": 0,
+      "play": 0,
+      "return": 0,
+      "id": 3
     }
   ]
 }
