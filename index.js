@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const gameButton = document.querySelector("#add-game")
 const addGameForm = document.querySelector('#game-form')
 const submitGame = document.querySelector('#submit-game')
-const contClass = document.querySelector('.container')
+const contClass = document.querySelector('#card_table')
 
 
 gameButton.addEventListener('click',(e) => {
@@ -21,7 +21,8 @@ gameButton.addEventListener('click',(e) => {
         
          const gameform = document.querySelector('#gameform')
 
-        //  Created the handlesubmit function within adding a game funtion so it could take be in the function scope. Without being in this function 
+        
+         //  Created the handlesubmit function within adding a game funtion so it could take be in the function scope. Without being in this function 
          gameform.addEventListener('submit', (e) => {
             e.preventDefault(e)
             //debugger; 
@@ -33,6 +34,7 @@ gameButton.addEventListener('click',(e) => {
             description:e.target.game_description.value,
           }
           renderGame(game)
+          createAGame(game)
          //debugger
     })
 })
@@ -43,26 +45,55 @@ gameButton.addEventListener('click',(e) => {
       let frontGameCard = document.createElement('div')
       let backGameCard = document.createElement('div')
       frontGameCard.className = 'front_card'
+      frontGameCard.id = `${game.id}`
       frontGameCard.innerHTML = `
       <img class = "gamePic" src = '${game.imgurl}'/>
-      <button class ='btn'> Button </button>
+      <button id = "card_btn" class ='btn'> ${game.name} </button>
       `
-      // `<h3> ${game.name} </h3>
-      // <img src = ${game.imgurl} />
-      // <p> ${game.description} </p>
-      // <p> ${game.price}</p>
-      // <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
-      // `
+      //cardButton.addEventListener('click', (e) => (console.log('Hi')))
+      backGameCard.innerHTML =
+      `<h3> ${game.name} </h3>
+      <img src = ${game.imgurl} />
+      <p> ${game.description} </p>
+      <p> ${game.price}</p>
+      <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
+      `
 //debugger
       contClass.appendChild(frontGameCard)
+      let cardButton = document.querySelector('#card_btn')
+
+      cardButton.addEventListener('click', (e) => {
+        frontGameCard.innerHTML = 
+          `<h3> ${game.name} </h3>
+        <p> ${game.description} </p>
+        <p> ${game.price}</p>
+        <button> 'Must Play' </button> <button> 'Return' </button><button> 'Retrun it'</button>
+        ` 
+      })
       //container.appendChild(gameCard);
 //debugger
     }
 
-    
+function getAllGames(){
+  fetch("http://localhost:3000/games")
+  .then(res => res.json())
+  .then(gameData => gameData.forEach(game => renderGame(game)))
 
-    // fetch("http://localhost:3000/games")
-    //   .then (function(respone)){
-    //     console.lo
-    //   }
+}   
+
+getAllGames()
+
+
+function createAGame(game){
+  fetch("http://localhost:3000/games",{
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify(game)
+  })
+    .then(res => res.json())
+    .then(game => console.log(game))
+}
+
 });
