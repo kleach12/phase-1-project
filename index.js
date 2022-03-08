@@ -38,22 +38,22 @@ gameButton.addEventListener('click',(e) => {
           }
           renderGame(game)
           createAGame(game)
+          gameform.innerHTML = '';
+
     })
 })
 
 
 
-    function renderGame(game){
-      let frontGameCard = document.createElement('div')
-
-      frontGameCard.className = 'front_card'
-      frontGameCard.id = `card_${game.id}`
-      frontGameCard.innerHTML = `
+function renderGame(game){
+  let frontGameCard = document.createElement('div')
+    frontGameCard.className = 'front_card'
+    frontGameCard.id = `card_${game.id}`
+    frontGameCard.innerHTML = `
       <div class = "container">
       <img class = "gamePic" src = '${game.imgurl}'/>
       <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
-      </div >
-      `
+      </div >`
 
       contClass.appendChild(frontGameCard)
       let cardButton = document.getElementById(`btn_${game.id}`)
@@ -62,17 +62,25 @@ gameButton.addEventListener('click',(e) => {
 
       frontGameCard.innerHTML = 
         `<div class = "container">
-        <h3> ${game.name} </h3>
-         <p> ${game.description} </p>
-         <p> ${game.price}</p>
-         <p> <span id = 'num-of-must'> ${game.must_play} </span></p> <button class = 'Must_Button'> Must Play </button> 
-         <p> <span id = 'num-of-play'> ${game.play} </span></p><button class = 'Play_Button'> Play </button> 
-         <p> <span id = 'num-of-return'> ${game.return} </span></p> <button class = 'Return_Button'> Return </button> 
-         </div">` 
+        <div class = 'column'>
+        <h2> ${game.name} </h2>
+        <p> ${game.description} </p>
+        <p> ${game.price}</p>
+        <div class = 'grid'>
+        <p> <span id = 'num-of-must'> ${game.must_play} </span></p> 
+        <p> <span id = 'num-of-play'> ${game.play} </span></p>
+        <p> <span id = 'num-of-return'> ${game.return} </span></p> 
+        <button class = 'Must_Button'> Must Play </button> 
+        <button class = 'Play_Button'> Play </button> 
+        <button class = 'Return_Button'> Return </button>
+        </div>
+        </div>
+        <button class = back_btn> Back </button>
+        </div">` 
 
-         frontGameCard.querySelector('.Must_Button').addEventListener('click', (e) =>{
+        frontGameCard.querySelector('.Must_Button').addEventListener('click', (e) =>{
            game.must_play += 1
-           frontGameCard.querySelector('#num-of-must').textContent = game.must_play
+            frontGameCard.querySelector('#num-of-must').textContent = game.must_play
            updateGameLike(game)
          })
 
@@ -88,9 +96,17 @@ gameButton.addEventListener('click',(e) => {
           updateGameLike(game)
         })
         
+        frontGameCard.querySelector('.back_btn').addEventListener('click', (e) =>{
+          frontGameCard.innerHTML = `
+            <div class = "container">
+            <img class = "gamePic" src = '${game.imgurl}'/>
+            <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
+            </div >`
+        })
+      })
+}
 
-     })
-    }
+
 
 function getAllGames(){
   fetch("http://localhost:3000/games")
@@ -99,6 +115,7 @@ function getAllGames(){
 
 }   
 getAllGames()
+
 
 
 function createAGame(game){
@@ -112,6 +129,8 @@ function createAGame(game){
     .then(res => res.json())
     .then(game => console.log(game))
 }
+
+
 
 function updateGameLike(game){
   fetch(`http://localhost:3000/games/${game.id}`,{

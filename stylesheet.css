@@ -144,6 +144,11 @@ input[type="text"], textarea {
   grid-template-columns: auto auto auto;
 }
 
+.column{
+  display: grid;
+  grid-template-columns: auto;
+}
+
 .front_card{
   background-color: #CEC3C1;
   color: #240115;
@@ -189,7 +194,24 @@ input[type="text"], textarea {
   border-radius: 5px;
 }
 
-#card-table{
-  display: grid;
-  grid-template-columns: auto auto auto;
+.front_card h2{
+
+  padding: 5px 12px;
+}
+
+.front_card p{
+  padding: 5px 12px;
+}
+
+.front_card .grid{
+  padding: 5px 12px;
+}
+
+.front_card button{
+  background-color: #DE3C4B;
+  color: #240115;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  padding: 5px 12px;
 }
