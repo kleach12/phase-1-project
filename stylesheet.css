@@ -139,15 +139,14 @@ input[type="text"], textarea {
   background-color: #CEC3C1;
 }
 
-.container{
-  background-color: #DE3C4B;
-
-
+.grid{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
 }
 
 .front_card{
+  background-color: #CEC3C1;
   color: #240115;
-  display: inline-grid;
   position: relative;
   margin: 10px;
   /* padding: 1rem; */
@@ -159,7 +158,6 @@ input[type="text"], textarea {
 
 .front_card .gamePic {
   /* justify-self: center; */
-  display: inline-grid;
   height: 25rem;
   width: 25rem;
   opacity: .90;
@@ -171,7 +169,7 @@ input[type="text"], textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: rgba(222, 60, 75, .7);
+  background-color: rgba(222, 60, 75, .9);
   font-size: 20px;
   font-weight: 800;
   font-family: 'Playfair Display', serif;
@@ -179,13 +177,19 @@ input[type="text"], textarea {
   padding: 12px 24px;
   border: none;
   cursor: pointer;
-  border:0.1em solid rgba(222, 60, 75, .7);
+  border:0.1em solid rgba(222, 60, 75, .9);
   border-radius: 5px;
 }
 .front_card .btn:hover{
-  background-color: transparent;
-  color: #DE3C4B;
+  background-color: rgba(222, 60, 75, .4);
+  color: #240115;
   opacity: .9;
   font-weight: 800;
+  border:0.1em solid rgba(222, 60, 75, .4);
+  border-radius: 5px;
 }
 
+#card-table{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}

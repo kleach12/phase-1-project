@@ -1,14 +1,14 @@
 {
   "games": [
     {
-      "name": "Soider Man PS4",
+      "name": "Spider Man PS4",
       "imgurl": "https://images.gnwcdn.com/2018/articles/2018-09-04-11-53/digitalfoundry-2018-marvels-spider-man-ps4-tech-analysis-1536058421317.jpg/EG11/resize/1200x-1/digitalfoundry-2018-marvels-spider-man-ps4-tech-analysis-1536058421317.jpg",
       "price": "59.99",
       "systems": "PS4",
-      "description": "Spider man spidserman does whatever a spider can ",
-      "must_play": 7,
-      "play": 4,
-      "return": 0,
+      "description": "Marvel's Spider-Man is a 2018 action-adventure game developed by Insomniac Games and published by Sony Interactive Entertainment.",
+      "must_play": 8,
+      "play": 5,
+      "return": 2,
       "id": 1
     },
     {
@@ -16,18 +16,18 @@
       "imgurl": "https://cdn.akamai.steamstatic.com/steam/apps/1245620/capsule_616x353.jpg?t=1646406355",
       "price": "59.99",
       "systems": "PS5",
-      "description": "Hard ASL",
-      "must_play": 2,
-      "play": 0,
-      "return": 0,
+      "description": "Elden Ring is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. The game was made in collaboration with fantasy novelist George R. R. Martin, who provided material for the game's setting",
+      "must_play": 5,
+      "play": 8,
+      "return": 1,
       "id": 2
     },
     {
-      "name": "Crash Bandicoot",
-      "imgurl": "https://www.crashbandicoot.com/content/dam/atvi/Crash/crash-touchui/common/Crash-Bandicoot-Work-Page.png",
+      "name": "Horizon Forbidden West",
+      "imgurl": "https://upload.wikimedia.org/wikipedia/en/6/69/Horizon_Forbidden_West_cover_art.jpg",
       "price": "59.99",
-      "systems": "PS4",
-      "description": "lalalalalalallalala",
+      "systems": "PS5, PS4",
+      "description": "Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. A sequel to 2017's Horizon Zero Dawn, it is an open world single-player video game set in a post-apocalyptic version of the Western United States",
       "must_play": 0,
       "play": 0,
       "return": 0,
