@@ -140,36 +140,26 @@ input[type="text"], textarea {
 }
 
 .container{
+  background-color: #DE3C4B;
+
 
 }
 
 .front_card{
-  background-color: #DE3C4B;
   color: #240115;
+  display: inline-grid;
   position: relative;
   margin: 10px;
   /* padding: 1rem; */
   width: 25rem;
   height: 25rem;
-  display: inline-grid;
   border-radius: 5px;
 }
 
 
-.back_card{
-  background-color: #CEC3C1;
-  border: grey solid 1px;
-  padding: 1rem;
-  width: 15rem;
-  height: 15rem;
-  display: inline-grid;
-  margin: 1rem 2rem;
-  /* box-shadow: 3px 4px #e04b52 */
-
-}
-
 .front_card .gamePic {
   /* justify-self: center; */
+  display: inline-grid;
   height: 25rem;
   width: 25rem;
   opacity: .90;
@@ -198,3 +188,4 @@ input[type="text"], textarea {
   opacity: .9;
   font-weight: 800;
 }
+

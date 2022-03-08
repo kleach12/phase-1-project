@@ -38,43 +38,58 @@ gameButton.addEventListener('click',(e) => {
           }
           renderGame(game)
           createAGame(game)
-         //debugger
     })
 })
 
 
+
     function renderGame(game){
-//debugger
       let frontGameCard = document.createElement('div')
-      //let backGameCard = document.createElement('div')
+
       frontGameCard.className = 'front_card'
       frontGameCard.id = `card_${game.id}`
       frontGameCard.innerHTML = `
+      <div class = "container">
       <img class = "gamePic" src = '${game.imgurl}'/>
       <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
+      </div >
       `
-  
-      // backGameCard.innerHTML =
-      // `<h3> ${game.name} </h3>
-      // <img src = ${game.imgurl} />
-      // <p> ${game.description} </p>
-      // <p> ${game.price}</p>
-      // <button> Must Play ${game.must_play}</button> <button> Play ${game.play} </button><button> Return ${game.return}  </button>
-      // `
 
       contClass.appendChild(frontGameCard)
       let cardButton = document.getElementById(`btn_${game.id}`)
 
-     cardButton.addEventListener('click', (e) => 
-     
+     cardButton.addEventListener('click', (e) => {
+
       frontGameCard.innerHTML = 
-        `<h3> ${game.name} </h3>
+        `<div class = "container">
+        <h3> ${game.name} </h3>
          <p> ${game.description} </p>
          <p> ${game.price}</p>
-         <button> Must Play ${game.must_play}</button> <button> Play ${game.play} </button><button> Return ${game.return}  </button>` 
-        )
+         <p> <span id = 'num-of-must'> ${game.must_play} </span></p> <button class = 'Must_Button'> Must Play </button> 
+         <p> <span id = 'num-of-play'> ${game.play} </span></p><button class = 'Play_Button'> Play </button> 
+         <p> <span id = 'num-of-return'> ${game.return} </span></p> <button class = 'Return_Button'> Return </button> 
+         </div">` 
 
+         frontGameCard.querySelector('.Must_Button').addEventListener('click', (e) =>{
+           game.must_play += 1
+           frontGameCard.querySelector('#num-of-must').textContent = game.must_play
+           updateGameLike(game)
+         })
 
+         frontGameCard.querySelector('.Play_Button').addEventListener('click', (e) =>{
+          game.play += 1
+          frontGameCard.querySelector('#num-of-play').textContent = game.play 
+          updateGameLike(game)
+        })
+
+        frontGameCard.querySelector('.Return_Button').addEventListener('click', (e) =>{
+          game.return += 1
+          frontGameCard.querySelector('#num-of-return').textContent = game.return 
+          updateGameLike(game)
+        })
+        
+
+     })
     }
 
 function getAllGames(){
@@ -98,6 +113,17 @@ function createAGame(game){
     .then(game => console.log(game))
 }
 
+function updateGameLike(game){
+  fetch(`http://localhost:3000/games/${game.id}`,{
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/JSON',
+      },
+      body: JSON.stringify(game)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
 
 
 });

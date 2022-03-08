@@ -6,8 +6,8 @@
       "price": "59.99",
       "systems": "PS4",
       "description": "Spider man spidserman does whatever a spider can ",
-      "must_play": 0,
-      "play": 0,
+      "must_play": 7,
+      "play": 4,
       "return": 0,
       "id": 1
     },
@@ -17,7 +17,7 @@
       "price": "59.99",
       "systems": "PS5",
       "description": "Hard ASL",
-      "must_play": 0,
+      "must_play": 2,
       "play": 0,
       "return": 0,
       "id": 2
