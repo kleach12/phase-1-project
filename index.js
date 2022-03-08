@@ -47,20 +47,23 @@ gameButton.addEventListener('click',(e) => {
 
 function renderGame(game){
   let frontGameCard = document.createElement('div')
+  const frontHTML = `
+    <div class = "container">
+    <img class = "gamePic" src = '${game.imgurl}'/>
+    <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
+    </div >`
     frontGameCard.className = 'front_card'
     frontGameCard.id = `card_${game.id}`
-    frontGameCard.innerHTML = `
-      <div class = "container">
-      <img class = "gamePic" src = '${game.imgurl}'/>
-      <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
-      </div >`
+    frontGameCard.innerHTML = frontHTML
 
       contClass.appendChild(frontGameCard)
+    function createCardButton(){
       let cardButton = document.getElementById(`btn_${game.id}`)
+      const addButton = cardButton.addEventListener('click', backCard)}
+    createCardButton()
 
-     cardButton.addEventListener('click', (e) => {
-
-      frontGameCard.innerHTML = 
+     function backCard(){
+       frontGameCard.innerHTML = 
         `<div class = "container">
         <div class = 'column'>
         <h2> ${game.name} </h2>
@@ -95,15 +98,13 @@ function renderGame(game){
           frontGameCard.querySelector('#num-of-return').textContent = game.return 
           updateGameLike(game)
         })
-        
-        frontGameCard.querySelector('.back_btn').addEventListener('click', (e) =>{
-          frontGameCard.innerHTML = `
-            <div class = "container">
-            <img class = "gamePic" src = '${game.imgurl}'/>
-            <button id = "btn_${game.id}" class ='btn'> ${game.name} </button>
-            </div >`
+
+        frontGameCard.querySelector('.back_btn').addEventListener('click', (e) => {
+          frontGameCard.innerHTML = frontHTML;
+          createCardButton()
         })
-      })
+
+      }
 }
 
 

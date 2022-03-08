@@ -17,7 +17,7 @@
       "price": "59.99",
       "systems": "PS5",
       "description": "Elden Ring is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. The game was made in collaboration with fantasy novelist George R. R. Martin, who provided material for the game's setting",
-      "must_play": 11,
+      "must_play": 15,
       "play": 12,
       "return": 7,
       "id": 2
@@ -51,7 +51,7 @@
       "systems": "All",
       "description": "Fall Guys: Ultimate Knockout is a platform battle royale game developed by Mediatonic and published by Devolver Digital. It was released for Microsoft Windows and PlayStation 4 on 4 August 2020.",
       "must_play": 0,
-      "play": 0,
+      "play": 1,
       "return": 0,
       "id": 5
     }
