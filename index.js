@@ -6,8 +6,7 @@ const submitGame = document.querySelector('#submit-game')
 const contClass = document.querySelector('#card_table')
 
 
-gameButton.addEventListener('click', createGameForm)
-
+gameButton.onclick = createGameForm;
 
 
 function createGameForm(e){
@@ -20,7 +19,7 @@ function createGameForm(e){
       <label class = "center"> Price</label><input id = 'game_price' class = 'textbox' type="text" ></lable>
       <label class = "center"> Systems</label><input id = 'game_system' class = 'textbox' type="text"></lable>
       <label class = "center"> Description</label><input id = 'game_description' type="text"></lable>
-      <input id ='submit-game' class = "center" type="submit" value = 'Get Rated'>
+      <input id ='submit-game' class = 'center' type="submit" value = 'Get Rated'/>
       </ul>
       </form id = gameform>`
         
@@ -28,7 +27,7 @@ function createGameForm(e){
 
       //  Created the handlesubmit function within adding a game funtion so it could take be in the function scope. Without being in this function 
       gameform.addEventListener('submit', (e) => {
-        e.preventDefault(e) 
+        e.preventDefault() 
         let game = {
           name: e.target.game_name.value,
           imgurl: e.target.game_img.value,
@@ -41,18 +40,18 @@ function createGameForm(e){
           }
           renderGame(game)
           createAGame(game)
+          hideGame()
       })
 }
 
 
 
-function hideGame(e){ 
-  e.stopImmediatePropagation();
+function hideGame(){ 
+  //e.stopImmediatePropagation();
   addGameForm.innerHTML = '';
-  createGameForm()
+  createGameForm
 }
 
-gameButton.addEventListener('click', hideGame)
 
 function renderGame(game){
   let frontGameCard = document.createElement('div')
