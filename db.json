@@ -17,9 +17,9 @@
       "price": "59.99",
       "systems": "PS5",
       "description": "Elden Ring is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. The game was made in collaboration with fantasy novelist George R. R. Martin, who provided material for the game's setting",
-      "must_play": 15,
-      "play": 12,
-      "return": 7,
+      "must_play": 16,
+      "play": 13,
+      "return": 8,
       "id": 2
     },
     {
@@ -29,7 +29,7 @@
       "systems": "PS5, PS4",
       "description": "Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. A sequel to 2017's Horizon Zero Dawn, it is an open world single-player video game set in a post-apocalyptic version of the Western United States",
       "must_play": 30,
-      "play": 8,
+      "play": 10,
       "return": 3,
       "id": 3
     },
