@@ -28,9 +28,9 @@
       "price": "59.99",
       "systems": "PS5, PS4",
       "description": "Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. A sequel to 2017's Horizon Zero Dawn, it is an open world single-player video game set in a post-apocalyptic version of the Western United States",
-      "must_play": 0,
-      "play": 0,
-      "return": 0,
+      "must_play": 30,
+      "play": 8,
+      "return": 2,
       "id": 3
     },
     {
@@ -39,9 +39,9 @@
       "price": "Free",
       "systems": "All",
       "description": "Call of Duty: Warzone is a free-to-play battle royale video game released on March 10, 2020, for PlayStation 4, Xbox One, and Microsoft Windows. A version for the PlayStation 5 and Xbox Series X/S has been announced to be released in 2022.",
-      "must_play": 0,
-      "play": 0,
-      "return": 0,
+      "must_play": 3,
+      "play": 17,
+      "return": 2,
       "id": 4
     },
     {
@@ -50,9 +50,9 @@
       "price": "$24.99",
       "systems": "All",
       "description": "Fall Guys: Ultimate Knockout is a platform battle royale game developed by Mediatonic and published by Devolver Digital. It was released for Microsoft Windows and PlayStation 4 on 4 August 2020.",
-      "must_play": 0,
-      "play": 1,
-      "return": 0,
+      "must_play": 15,
+      "play": 10,
+      "return": 4,
       "id": 5
     }
   ]
