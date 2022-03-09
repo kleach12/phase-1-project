@@ -5,26 +5,26 @@ const addGameForm = document.querySelector('#game-form')
 const submitGame = document.querySelector('#submit-game')
 const contClass = document.querySelector('#card_table')
 
-
-gameButton.onclick = createGameForm;
+gameButton.addEventListener('click', createGameForm)
 
 
 function createGameForm(e){
 
   addGameForm.innerHTML = `
-    <form id = 'gameform'>
       <ul>
+      <form id = 'gameform'>
       <label class = "center"> Name </label><input id = 'game_name' class = 'textbox' type="text" ></lable>
       <label class = "center"> IMG URL</label><input id = 'game_img' class = 'textbox' type="text" ></lable>
       <label class = "center"> Price</label><input id = 'game_price' class = 'textbox' type="text" ></lable>
       <label class = "center"> Systems</label><input id = 'game_system' class = 'textbox' type="text"></lable>
       <label class = "center"> Description</label><input id = 'game_description' type="text"></lable>
       <input id ='submit-game' class = 'center' type="submit" value = 'Get Rated'/>
-      </ul>
-      </form id = gameform>`
+      </form id = gameform>
+      <button id = 'back_btn'> Hide </button>
+      </ul>`
         
       const gameform = document.querySelector('#gameform')
-
+      //console.log(gameform)
       //  Created the handlesubmit function within adding a game funtion so it could take be in the function scope. Without being in this function 
       gameform.addEventListener('submit', (e) => {
         e.preventDefault() 
@@ -40,14 +40,14 @@ function createGameForm(e){
           }
           renderGame(game)
           createAGame(game)
-          hideGame()
       })
+      const backButton = document.querySelector('#back_btn')
+      backButton.addEventListener('click', hideGame)
 }
 
 
 
 function hideGame(){ 
-  //e.stopImmediatePropagation();
   addGameForm.innerHTML = '';
   createGameForm
 }

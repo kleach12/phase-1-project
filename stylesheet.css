@@ -232,4 +232,21 @@ input[type="text"], textarea {
   border-radius: 5px;
 }
 
+#back_btn{
+  background-color: #DE3C4B;
+  color: #240115;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  border:0.1em solid rgba(222, 60, 75, .4);
+  margin-top: 5px;
+  padding: 5px ;
+}
 
+#back_btn:hover{
+  background-color: rgba(222, 60, 75, .4);
+  color: #240115;
+  font-weight: 800;
+  border:0.1em solid rgba(222, 60, 75, .4);
+  border-radius: 5px;
+}
