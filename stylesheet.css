@@ -199,7 +199,8 @@ input[type="text"], textarea {
 }
 
 .front_card h2{
-
+  font-size: 30px;
+  color:#240115;
   padding: 5px 12px;
 }
 
@@ -231,6 +232,10 @@ input[type="text"], textarea {
   border:0.1em solid rgba(222, 60, 75, .4);
   border-radius: 5px;
 }
+.front_card span{
+  font-size: 20px;
+  font 
+}
 
 #back_btn{
   background-color: #DE3C4B;
@@ -249,4 +254,9 @@ input[type="text"], textarea {
   font-weight: 800;
   border:0.1em solid rgba(222, 60, 75, .4);
   border-radius: 5px;
+}
+
+#sys_price{
+  display: inline-grid;
+  grid-template-columns: auto auto ;
 }
