@@ -27,4 +27,4 @@ Kale Leach - Flatiron School Student
 
 <h2>Project Status</h2>
 
-The project is currently in it final revision stage.
+The project is currently in its final revision stage.
